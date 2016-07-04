@@ -108,3 +108,15 @@ describe('test wordCount method', () => {
     expect(typeof('America'.wordCount())).toBe('number');
   });
 });
+
+describe('test toCurrency method', () => {
+  it('should retur a currency representation of the string', () => {
+    expect('12364'.toCurrency()).toEqual('12,364.00');
+    expect('450425.97'.toCurrency()).toEqual('450,425.97');
+    expect('8670'.toCurrency()).toEqual('8,670.00');
+  });
+
+  it('should check the type of results to be a string', () => {
+    expect(typeof('12364'.toCurrency())).toBe('string');
+  });
+});

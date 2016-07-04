@@ -46,5 +46,10 @@ String.prototype.wordCount = function () {
     count += 1;
   });
   return count;
+};
 
+String.prototype.toCurrency = function () {
+  var integr = parseFloat(this);
+  var newIntegr = integr.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+  return newIntegr;
 };
