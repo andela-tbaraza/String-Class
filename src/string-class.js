@@ -28,3 +28,11 @@ String.prototype.toLower = function () {
 String.prototype.ucFirst = function () {
   return [this.charAt(0).toUpper(), this.slice(1)].join('');
 };
+
+String.prototype.isQuestion = function () {
+  var last = new RegExp(/\?$/);
+  console.log(last)
+  return last.test(this) ? true : false;
+};
+
+console.log('try?'.isQuestion())
