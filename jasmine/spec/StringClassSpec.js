@@ -96,3 +96,15 @@ describe('test words function', () => {
     expect(Array.isArray('Andela'.words())).toBeTruthy();
   });
 });
+
+describe('test wordCount method', () => {
+  it('should count the number of words in a string', () => {
+    expect('America'.wordCount()).toEqual(1);
+    expect('This really sucks'.wordCount()).toEqual(3);
+    expect('I:love, GOD'.wordCount()).toEqual(3);
+  });
+
+  it('should check type of the results to be number', () => {
+    expect(typeof('America'.wordCount())).toBe('number');
+  });
+});

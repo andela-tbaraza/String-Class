@@ -38,3 +38,13 @@ String.prototype.words = function () {
   var re = new RegExp(/\W+/);
   return this.split(re);
 };
+
+String.prototype.wordCount = function () {
+  var count = 0;
+  const newArray = this.words();
+  newArray.forEach(() => {
+    count += 1;
+  });
+  return count;
+
+};
