@@ -31,8 +31,10 @@ String.prototype.ucFirst = function () {
 
 String.prototype.isQuestion = function () {
   var last = new RegExp(/\?$/);
-  console.log(last)
   return last.test(this) ? true : false;
 };
 
-console.log('try?'.isQuestion())
+String.prototype.words = function () {
+  var re = new RegExp(/\W+/);
+  return this.split(re);
+};

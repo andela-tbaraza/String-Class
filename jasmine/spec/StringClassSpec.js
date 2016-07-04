@@ -78,3 +78,21 @@ describe('test isQuestion method', () => {
     expect(typeof('TBNRTY'.isQuestion())).toBe('boolean');
   });
 });
+
+describe('test words function', () => {
+  it('should return an array of the string provided', () => {
+    expect('tonida'.words()).toEqual(['tonida']);
+    expect('Angel:Gabriel,is going home'.words()).toEqual(['Angel', 'Gabriel', 'is', 'going', 'home']);
+    expect('Today,tomorrow'.words()).toEqual(['Today', 'tomorrow']);
+    expect(''.words()).toEqual(['']);
+    expect('This is Andela'.words()).toEqual(['This', 'is', 'Andela']);
+  });
+
+  it('should check that the type of results is an object', () => {
+    expect(typeof('tonida'.words())).toEqual('object');
+  });
+
+  it('should check the results to be an instance of an array', () => {
+    expect(Array.isArray('Andela'.words())).toBeTruthy();
+  });
+});
