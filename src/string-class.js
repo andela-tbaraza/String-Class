@@ -10,30 +10,18 @@ String.prototype.hasVowels = function hasVowels() {
 
 String.prototype.toUpper = function toUpper() {
   /* Converts a string to uppercase format */
-  let newString = '';
-  const lower = new RegExp('[a-z]');
-  for (let index = 0; index < this.length; index++) {
-    if (lower.test(this[index])) {
-      newString += String.fromCharCode((this.charCodeAt(index)) - 32);
-    } else {
-      newString += this[index];
-    }
-  }
-  return newString;
+  const lower = new RegExp('[a-z]', 'g');
+  return this.replace(lower, (letter => {
+    return String.fromCharCode(letter.charCodeAt(0) - 32);
+  }));
 };
 
 String.prototype.toLower = function toLower() {
   /* Converts a string to lowercase format */
-  let newString = '';
-  const upper = new RegExp('[A-Z]');
-  for (let index = 0; index < this.length; index++) {
-    if (upper.test(this[index])) {
-      newString += String.fromCharCode((this.charCodeAt(index)) + 32);
-    } else {
-      newString += this[index];
-    }
-  }
-  return newString;
+  const upper = new RegExp('[A-Z]', 'g');
+  return this.replace(upper, letter => {
+    return String.fromCharCode(letter.charCodeAt(0) + 32);
+  });
 };
 
 String.prototype.ucFirst = function ucFirst() {

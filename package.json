@@ -1,0 +1,23 @@
+{
+  "name": "string_class_extension",
+  "version": "1.0.0",
+  "description": "This is an extension of the javascript string class using prototypes",
+  "main": "string-class.js",
+  "dependencies": {},
+  "devDependencies": {
+    "karma": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-tbaraza/String-Class.git"
+  },
+  "author": "Tonida Baraza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andela-tbaraza/String-Class/issues"
+  },
+  "homepage": "https://github.com/andela-tbaraza/String-Class#readme"
+}
