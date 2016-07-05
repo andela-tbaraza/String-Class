@@ -53,3 +53,7 @@ String.prototype.toCurrency = function () {
   var newIntegr = integr.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
   return newIntegr;
 };
+
+String.prototype.fromCurrency = function () {
+  return Number(this.replace(/\,/g, ''))
+};

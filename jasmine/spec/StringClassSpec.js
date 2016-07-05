@@ -110,7 +110,7 @@ describe('test wordCount method', () => {
 });
 
 describe('test toCurrency method', () => {
-  it('should retur a currency representation of the string', () => {
+  it('should return a currency representation of the string', () => {
     expect('12364'.toCurrency()).toEqual('12,364.00');
     expect('450425.97'.toCurrency()).toEqual('450,425.97');
     expect('8670'.toCurrency()).toEqual('8,670.00');
@@ -118,5 +118,17 @@ describe('test toCurrency method', () => {
 
   it('should check the type of results to be a string', () => {
     expect(typeof('12364'.toCurrency())).toBe('string');
+  });
+});
+
+describe('test fromCurrency method', () =>  {
+  it('should return a number format of the string', () => {
+    expect('11,111.11'.fromCurrency()).toEqual(11111.11);
+    expect('1,111.00'.fromCurrency()).toEqual(1111.00);
+    expect('1,111'.fromCurrency()).toEqual(1111)
+  });
+
+  it('should check the type of results to be number', () => {
+    expect(typeof('11,111.11'.fromCurrency())).toBe('number');
   });
 });
