@@ -30,6 +30,13 @@ describe('test toUpper method', () => {
   it('should check the type of results to be a string', () => {
     expect(typeof('tonida'.toUpper())).toBe('string');
   });
+
+  it('should check the inbuilt toUpper method has not called', () => {
+    spyOn(String.prototype, 'toUpperCase');
+    const fake = 'ambassador';
+    fake.toUpper();
+    expect(String.prototype.toUpperCase).not.toHaveBeenCalled();
+  });
 });
 
 describe('test toLower method', () => {
@@ -41,7 +48,14 @@ describe('test toLower method', () => {
   });
 
   it('should check the type of results to be a string', () => {
-    expect(typeof('tonida'.toLower())).toBe('string');
+    expect(typeof('orthography'.toLower())).toBe('string');
+  });
+
+  it('should check the inbuilt toLowerCae method has not called', () => {
+    spyOn(String.prototype, 'toLowerCase');
+    const fake = 'superarogatory';
+    fake.toUpper();
+    expect(String.prototype.toLowerCase).not.toHaveBeenCalled();
   });
 });
 
