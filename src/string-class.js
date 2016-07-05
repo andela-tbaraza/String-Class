@@ -1,53 +1,59 @@
-String.prototype.hasVowels = function() {
+/* eslint-disable no-extend-native */
+
+String.prototype.hasVowels = function hasVowels() {
   /* this method returns true if there is a vowels
      in a string and false for absence of vowels
   */
   const vowels = new RegExp('[aeiou]', 'i');
-  return vowels.test(this) ? true : false;
+  return vowels.test(this);
 };
 
-String.prototype.toUpper = function () {
+String.prototype.toUpper = function toUpper() {
   /* converts a string to uppercase format */
   let newString = '';
-  const upper = new RegExp('[a-z]');
+  const lower = new RegExp('[a-z]');
   for (let index = 0; index < this.length; index++) {
-    upper.test(this[index]) ?
-    newString += String.fromCharCode((this.charCodeAt(index)) - 32) :
-    newString += this[index];
+    if (lower.test(this[index])) {
+      newString += String.fromCharCode((this.charCodeAt(index)) - 32);
+    } else {
+      newString += this[index];
+    }
   }
   return newString;
 };
 
-String.prototype.toLower = function () {
+String.prototype.toLower = function toLower() {
   /* converts a string to lowercase format */
   let newString = '';
   const upper = new RegExp('[A-Z]');
   for (let index = 0; index < this.length; index++) {
-    upper.test(this[index]) ?
-    newString += String.fromCharCode((this.charCodeAt(index)) + 32) :
-    newString += this[index];
+    if (upper.test(this[index])) {
+      newString += String.fromCharCode((this.charCodeAt(index)) + 32);
+    } else {
+      newString += this[index];
+    }
   }
   return newString;
 };
 
-String.prototype.ucFirst = function () {
+String.prototype.ucFirst = function ucFirst() {
   /* converts the forst letter of a string to uppercase */
   return [this.charAt(0).toUpper(), this.slice(1)].join('');
 };
 
-String.prototype.isQuestion = function () {
+String.prototype.isQuestion = function isQuestion() {
   /* checks if a string is a question */
   const question = new RegExp(/\?$/);
-  return question.test(this) ? true : false;
+  return question.test(this);
 };
 
-String.prototype.words = function () {
+String.prototype.words = function words() {
   /* makes an array out of a string */
   const boundary = new RegExp(/\W+/);
   return this.split(boundary);
 };
 
-String.prototype.wordCount = function () {
+String.prototype.wordCount = function wordCount() {
   /* gives the count of words in a string */
   let count = 0;
   const newArray = this.words();
@@ -57,14 +63,14 @@ String.prototype.wordCount = function () {
   return count;
 };
 
-String.prototype.toCurrency = function () {
+String.prototype.toCurrency = function toCurrency() {
   /* returns a currency format of a string */
-  let floatString = parseFloat(this);
-  let currencyString = floatString.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+  const floatString = parseFloat(this);
+  const currencyString = floatString.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
   return currencyString;
 };
 
-String.prototype.fromCurrency = function () {
+String.prototype.fromCurrency = function fromCurrency() {
   /* returns the number format of a string */
-  return Number(this.replace(/\,/g, ''));
+  return Number(this.replace(/,/, ''));
 };

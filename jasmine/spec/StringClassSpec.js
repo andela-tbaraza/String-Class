@@ -82,7 +82,8 @@ describe('test isQuestion method', () => {
 describe('test words function', () => {
   it('should return an array of the string provided', () => {
     expect('tonida'.words()).toEqual(['tonida']);
-    expect('Angel:Gabriel,is going home'.words()).toEqual(['Angel', 'Gabriel', 'is', 'going', 'home']);
+    expect('Angel:Gabriel,is going home'.words())
+    .toEqual(['Angel', 'Gabriel', 'is', 'going', 'home']);
     expect('Today,tomorrow'.words()).toEqual(['Today', 'tomorrow']);
     expect(''.words()).toEqual(['']);
     expect('This is Andela'.words()).toEqual(['This', 'is', 'Andela']);
@@ -121,7 +122,7 @@ describe('test toCurrency method', () => {
   });
 });
 
-describe('test fromCurrency method', () =>  {
+describe('test fromCurrency method', () => {
   it('should return a number format of the string', () => {
     expect('11,111.11'.fromCurrency()).toEqual(11111.11);
     expect('1,111.00'.fromCurrency()).toEqual(1111.00);
