@@ -16,3 +16,13 @@ This is an extension of the inbuilt String class. Basically it adds other method
 * On your terminal change directory to the root project folder.
 * Start the server `httpster`.
 * Navigate to http://localhost:3333/jasmine/SpecRunner.html on your browser to run the tests and use the functions on the console.
+
+***
+
+# Featured methods
+
+## hasVowels
+`this method returns true if there is a vowels in a string and false for absence of vowels`
+
+## toUpper
+`converts a string to uppercase format`
