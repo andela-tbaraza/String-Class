@@ -5,16 +5,18 @@
   "main": "string-class.js",
   "dependencies": {},
   "devDependencies": {
+    "coveralls": "^2.11.9",
     "istanbul": "^0.4.4",
     "jasmine-core": "^2.4.1",
     "karma": "^1.1.0",
+    "karma-coverage": "^1.0.0",
     "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.1",
     "phantomjs-prebuilt": "^2.1.7"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "istanbul cover src/string-class.js node_modules/.bin/karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
