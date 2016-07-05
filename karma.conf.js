@@ -16,7 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'src/string-class.js',
-      '/jasmine/spec/stringClassSpec.js'
+      '/jasmine/spec/StringClassSpec.js'
     ],
 
 
