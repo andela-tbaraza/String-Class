@@ -43,12 +43,7 @@ String.prototype.words = function words() {
 
 String.prototype.wordCount = function wordCount() {
   /* Gives the count of words in a string */
-  let count = 0;
-  const newArray = this.words();
-  newArray.forEach(() => {
-    count += 1;
-  });
-  return count;
+  return this.words().length;
 };
 
 String.prototype.toCurrency = function toCurrency() {
