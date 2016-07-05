@@ -22,13 +22,10 @@ This is an extension of the inbuilt String class. Basically it adds other method
 # Featured methods
 
 ### hasVowels
-`This method returns true if there is a vowels in a string and false for absence of vowels`
-
-``` 'toni'.hasVowels()
+`This method returns true if there is a vowels in a string and false for absence of vowels
+'toni'.hasVowels()
 // returns
-true
-
-```
+true`
 
 ### toUpper
 `Converts a string to uppercase format`
