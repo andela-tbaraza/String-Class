@@ -125,7 +125,7 @@ describe('test fromCurrency method', () =>  {
   it('should return a number format of the string', () => {
     expect('11,111.11'.fromCurrency()).toEqual(11111.11);
     expect('1,111.00'.fromCurrency()).toEqual(1111.00);
-    expect('1,111'.fromCurrency()).toEqual(1111)
+    expect('1,111'.fromCurrency()).toEqual(1111);
   });
 
   it('should check the type of results to be number', () => {

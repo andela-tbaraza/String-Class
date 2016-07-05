@@ -4,7 +4,7 @@ String.prototype.hasVowels = function() {
 };
 
 String.prototype.toUpper = function () {
-  var newString = '';
+  let newString = '';
   const upper = new RegExp('[a-z]');
   for (let index = 0; index < this.length; index++) {
     upper.test(this[index]) ?
@@ -15,7 +15,7 @@ String.prototype.toUpper = function () {
 };
 
 String.prototype.toLower = function () {
-  var newString = '';
+  let newString = '';
   const upper = new RegExp('[A-Z]');
   for (let index = 0; index < this.length; index++) {
     upper.test(this[index]) ?
@@ -30,17 +30,17 @@ String.prototype.ucFirst = function () {
 };
 
 String.prototype.isQuestion = function () {
-  var last = new RegExp(/\?$/);
-  return last.test(this) ? true : false;
+  const question = new RegExp(/\?$/);
+  return question.test(this) ? true : false;
 };
 
 String.prototype.words = function () {
-  var re = new RegExp(/\W+/);
-  return this.split(re);
+  const boundary = new RegExp(/\W+/);
+  return this.split(boundary);
 };
 
 String.prototype.wordCount = function () {
-  var count = 0;
+  let count = 0;
   const newArray = this.words();
   newArray.forEach(() => {
     count += 1;
@@ -49,11 +49,11 @@ String.prototype.wordCount = function () {
 };
 
 String.prototype.toCurrency = function () {
-  var integr = parseFloat(this);
-  var newIntegr = integr.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
-  return newIntegr;
+  let floatString = parseFloat(this);
+  let currencyString = floatString.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+  return currencyString;
 };
 
 String.prototype.fromCurrency = function () {
-  return Number(this.replace(/\,/g, ''))
+  return Number(this.replace(/\,/g, ''));
 };
