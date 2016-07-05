@@ -2,7 +2,8 @@ fail_on_violations: true
 
 javascript:
   enabled: false
-  ignore_file: jasmine/lib/jasmine-2.3.4/jasmine-html.js
+
 eslint:
   enabled: true
   config_file: .eslintrc.json
+  ignore_file: jasmine/lib/jasmine-2.3.4/jasmine-html.js
