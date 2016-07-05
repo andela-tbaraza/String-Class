@@ -21,8 +21,38 @@ This is an extension of the inbuilt String class. Basically it adds other method
 
 # Featured methods
 
-## hasVowels
-`this method returns true if there is a vowels in a string and false for absence of vowels`
+### hasVowels
+```This method returns true if there is a vowels in a string and false for absence of vowels
+'toni'.hasVowels()
+// returns
+true
 
-## toUpper
-`converts a string to uppercase format`
+```
+
+### toUpper
+```Converts a string to uppercase format
+```
+
+### toLower
+```Converts a string to lowercase format
+
+```
+
+### ucFirst
+```Converts the first letter of a string to uppercase
+```
+
+### isQuestion
+```Checks if a string is a question
+```
+
+### wordCount
+```Gives the count of words in a string
+```
+
+### toCurrency
+`Returns a currency format of a string`
+
+### fromCurrency
+`Returns the number format of a string
+`
