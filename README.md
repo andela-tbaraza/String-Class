@@ -7,26 +7,35 @@ This is an extension of the inbuilt String class. Basically it adds other method
 
 #Usage
 * Install [NodeJs](https://nodejs.org/en/)
-* Install httpster `npm install -g httpster`
 * Clone the [repository](https://github.com/andela-tbaraza/String-Class.git)
+* Install the dependencies `$ npm install`
+
+
+# Running on Node
+* Get the node environment ` $ node`
+* Require the source file
+`> require('./src/string-class.js')`
+* Use the various methods as specified in the featured     methods example
+
 
 ***
 
 # Running the tests
 
 * On your terminal change directory to the root project folder.
-* Start the server `httpster`.
-* Navigate to http://localhost:3333/jasmine/SpecRunner.html on your browser to run the tests and use the functions on the console.
+* Run `$ npm test`
 
 ***
 
 # Featured methods
 
 ### hasVowels
-`This method returns true if there is a vowels in a string and false for absence of vowels
-'toni'.hasVowels()
-// returns
-true`
+`This method returns true if there is a vowels in a string and false for absence of vowels`
+
+```javascript
+var try1 = 'toni'.hasVowels() returns true
+var try2 = 'rtty'.hasVowels() returns false
+```
 
 ### toUpper
 `Converts a string to uppercase format`
