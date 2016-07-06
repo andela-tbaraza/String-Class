@@ -1,3 +1,4 @@
+require('../src/string-class');
 describe('test hasVowels method', () => {
   it('should return true if the string has vowels', () => {
     expect('TONIDA HAS ORANGES'.hasVowels()).toBeTruthy();

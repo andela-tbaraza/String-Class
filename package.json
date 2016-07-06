@@ -7,16 +7,11 @@
   "devDependencies": {
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.4",
-    "jasmine-core": "^2.4.1",
-    "karma": "^1.1.0",
-    "karma-coverage": "^1.0.0",
-    "karma-firefox-launcher": "^1.0.0",
-    "karma-jasmine": "^1.0.2",
-    "karma-phantomjs-launcher": "^1.0.1",
-    "phantomjs-prebuilt": "^2.1.7"
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1"
   },
   "scripts": {
-    "test": "istanbul cover src/string-class.js node_modules/.bin/karma start karma.conf.js"
+    "test": "istanbul cover jasmine"
   },
   "repository": {
     "type": "git",
