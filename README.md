@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/andela-tbaraza/String-Class.svg?branch=develop)](https://travis-ci.org/andela-tbaraza/String-Class)
+[![Build Status](https://travis-ci.org/andela-tbaraza/String-Class.svg?branch=develop)](https://travis-ci.org/andela-tbaraza/String-Class) [![Coverage Status](https://coveralls.io/repos/github/andela-tbaraza/String-Class/badge.svg?branch=develop)](https://coveralls.io/github/andela-tbaraza/String-Class?branch=develop)
 # String-Class Extension
 
 This is an extension of the inbuilt String class. Basically it adds other methods to this class.The methods' execution is similar to the normal String class methods. The extension has been implemented using javascript prototypes concept.
