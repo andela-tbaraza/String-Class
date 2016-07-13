@@ -11,7 +11,7 @@
     "jasmine-core": "^2.4.1"
   },
   "scripts": {
-    "test": "istanbul cover node_modules/.bin/jasmine"
+    "test": "istanbul cover jasmine && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",

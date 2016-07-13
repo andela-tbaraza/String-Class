@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/andela-tbaraza/String-Class.svg?branch=develop)](https://travis-ci.org/andela-tbaraza/String-Class) [![Coverage Status](https://coveralls.io/repos/github/andela-tbaraza/String-Class/badge.svg?branch=develop)](https://coveralls.io/github/andela-tbaraza/String-Class?branch=develop)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bd92ddbee7404039bb176d0a3aa6fcca)](https://www.codacy.com/app/tonida-baraza/String-Class?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=andela-tbaraza/String-Class&amp;utm_campaign=Badge_Grade)
 # String-Class Extension
 
 This is an extension of the inbuilt String class. Basically it adds other methods to this class.The methods' execution is similar to the normal String class methods. The extension has been implemented using javascript prototypes concept.
