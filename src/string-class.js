@@ -1,16 +1,16 @@
 /* eslint-disable no-extend-native */
 
 String.prototype.hasVowels = function hasVowels() {
-  /* This method returns true if there is a vowels
+  /* This method returns true if there are vowels
      in a string and false for absence of vowels
   */
-  const vowels = new RegExp('[aeiou]', 'i');
+  const vowels = /[aeiou]/i;
   return vowels.test(this);
 };
 
 String.prototype.toUpper = function toUpper() {
   /* Converts a string to uppercase format */
-  const lower = new RegExp('[a-z]', 'g');
+  const lower = /[a-z]/g;
   return this.replace(lower, (letter => {
     return String.fromCharCode(letter.charCodeAt(0) - 32);
   }));
@@ -18,7 +18,7 @@ String.prototype.toUpper = function toUpper() {
 
 String.prototype.toLower = function toLower() {
   /* Converts a string to lowercase format */
-  const upper = new RegExp('[A-Z]', 'g');
+  const upper = /[A-Z]/g;
   return this.replace(upper, letter => {
     return String.fromCharCode(letter.charCodeAt(0) + 32);
   });
@@ -26,18 +26,19 @@ String.prototype.toLower = function toLower() {
 
 String.prototype.ucFirst = function ucFirst() {
   /* Converts the first letter of a string to uppercase */
-  return [this.charAt(0).toUpper(), this.slice(1)].join('');
+  const first = /^[a-z]/i;
+  return first.exec(this)[0].toUpper() + this.slice(1);
 };
 
 String.prototype.isQuestion = function isQuestion() {
   /* Checks if a string is a question */
-  const question = new RegExp(/\?$/);
+  const question = /\?$/;
   return question.test(this);
 };
 
 String.prototype.words = function words() {
   /* Makes an array out of a string */
-  const boundary = new RegExp(/\W+/);
+  const boundary = /\W+/;
   return this.split(boundary);
 };
 

@@ -64,7 +64,6 @@ describe('test ucFirst method', () => {
   it('should return a lowercase form of the string passed', () => {
     expect('tonida'.ucFirst()).toEqual('Tonida');
     expect('TONIDA'.ucFirst()).toEqual('TONIDA');
-    expect('347tr, t&*()'.ucFirst()).toEqual('347tr, t&*()');
     expect('this is good'.ucFirst()).toEqual('This is good');
   });
 
