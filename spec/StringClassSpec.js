@@ -99,7 +99,7 @@ describe('test words function', () => {
     expect('Angel:Gabriel,is going home'.words())
     .toEqual(['Angel', 'Gabriel', 'is', 'going', 'home']);
     expect('Today,tomorrow'.words()).toEqual(['Today', 'tomorrow']);
-    expect(''.words()).toEqual(['']);
+    expect(''.words()).toEqual(null);
     expect('This is Andela'.words()).toEqual(['This', 'is', 'Andela']);
   });
 

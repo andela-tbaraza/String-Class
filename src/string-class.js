@@ -37,9 +37,9 @@ String.prototype.isQuestion = function isQuestion() {
 };
 
 String.prototype.words = function words() {
-  /* Makes an array out of a string */
+  /* creates an array of the string */
   const boundary = /\W+/;
-  return this.split(boundary);
+  return boundary.test(this) ? this.split(boundary) : this.match(/\S+/g);
 };
 
 String.prototype.wordCount = function wordCount() {
