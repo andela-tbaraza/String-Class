@@ -61,8 +61,15 @@ String.prototype.fromCurrency = function fromCurrency() {
 };
 
 String.prototype.numberWords = function numberWords() {
+  /* returns the numbers in words*/
   const words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
   return this.replace(/[0-9]/g, (digit => {
     return words[digit] + ' ';
   }));
+};
+
+String.prototype.startWith = function startWith(start) {
+  /* affirms if the string starts with the specified input */
+  const match = new RegExp(/(^\S+)/i.exec(this)[0]);
+  return match.test(start);
 };

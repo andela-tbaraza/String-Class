@@ -52,7 +52,7 @@ describe('test toLower method', () => {
     expect(typeof('orthography'.toLower())).toBe('string');
   });
 
-  it('should check the inbuilt toLowerCae method has not called', () => {
+  it('should check the inbuilt toLowerCase method has not called', () => {
     spyOn(String.prototype, 'toLowerCase');
     const fake = 'superarogatory';
     fake.toUpper();
@@ -153,5 +153,13 @@ describe('test numberWords method', () => {
     expect('345'.numberWords()).toEqual('three four five ');
     expect('1947'.numberWords()).toEqual('one nine four seven ');
     expect('2648.00'.numberWords()).toEqual('two six four eight .zero zero ');
+  });
+});
+
+describe('test startWith method', () => {
+  it('should affirm is a string starts with the specified input', () => {
+    expect('This is great'.startWith('This')).toBeTruthy();
+    expect('@super does ABC'.startWith('@super')).toBeTruthy();
+    expect('reason and knowledge'.startWith()).toBeFalsy();
   });
 });
