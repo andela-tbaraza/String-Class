@@ -1,4 +1,6 @@
 /* eslint-disable no-extend-native */
+/* eslint-disable arrow-body-style */
+/* eslint-disable prefer-template */
 
 String.prototype.hasVowels = function hasVowels() {
   /* This method returns true if there are vowels
@@ -50,11 +52,17 @@ String.prototype.wordCount = function wordCount() {
 String.prototype.toCurrency = function toCurrency() {
   /* Returns a currency format of a string */
   const floatString = parseFloat(this);
-  const currencyString = floatString.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
-  return currencyString;
+  return floatString.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 };
 
 String.prototype.fromCurrency = function fromCurrency() {
   /* Returns the number format of a string */
   return Number(this.replace(/,/, ''));
+};
+
+String.prototype.numberWords = function numberWords() {
+  const words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+  return this.replace(/[0-9]/g, (digit => {
+    return words[digit] + ' ';
+  }));
 };

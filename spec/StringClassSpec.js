@@ -147,3 +147,11 @@ describe('test fromCurrency method', () => {
     expect(typeof('11,111.11'.fromCurrency())).toBe('number');
   });
 });
+
+describe('test numberWords method', () => {
+  it('should return the numbers in words', () => {
+    expect('345'.numberWords()).toEqual('three four five ');
+    expect('1947'.numberWords()).toEqual('one nine four seven ');
+    expect('2648.00'.numberWords()).toEqual('two six four eight .zero zero ');
+  });
+});
