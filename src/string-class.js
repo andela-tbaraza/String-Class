@@ -69,7 +69,7 @@ String.prototype.numberWords = function numberWords() {
 };
 
 String.prototype.startWith = function startWith(start) {
-  /* affirms if the string starts with the specified input */
+  /* affirms if the string starts with the specified input returns false if not */
   const match = new RegExp(/^\S+/i.exec(this)[0]);
   return match.test(start);
 };
@@ -80,31 +80,33 @@ String.prototype.endWith = function endWith(end) {
 };
 
 String.prototype.alternatingCase = function alternatingCase() {
+  /* returns each letter in a string in alternating cases */
   let count = 0;
   const testCase = /([a-z])/gi;
   let final = '';
 
-  for (const lettr of this) {
-    if (lettr.match(testCase)) {
-      final = final.concat(count % 2 === 0 ? lettr.toLowerCase() : lettr.toUpperCase());
+  for (const letter of this) {
+    if (letter.match(testCase)) {
+      final = final.concat(count % 2 === 0 ? letter.toLowerCase() : letter.toUpperCase());
       count++;
     } else {
-      final = final.concat(lettr);
+      final = final.concat(letter);
     }
   }
   return final;
 };
 
 String.prototype.inverseCase = function inverseCase() {
+  /* returns each letter in a string in inverse of its original case*/
   const testCase = /([a-z])/gi;
   let final = '';
 
-  for (const lettr of this) {
-    if (lettr.match(testCase)) {
-      final = final.concat(lettr.charCodeAt() > 96 && lettr.charCodeAt() < 123
-      ? lettr.toUpper() : lettr.toLower());
+  for (const letter of this) {
+    if (letter.match(testCase)) {
+      final = final.concat(letter.charCodeAt() > 96 && letter.charCodeAt() < 123
+      ? letter.toUpper() : letter.toLower());
     } else {
-      final = final.concat(lettr);
+      final = final.concat(letter);
     }
   }
   return final;
