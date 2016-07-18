@@ -54,8 +54,8 @@ describe('test toLower method', () => {
 
   it('should check the inbuilt toLowerCase method has not called', () => {
     spyOn(String.prototype, 'toLowerCase');
-    const fake = 'superarogatory';
-    fake.toUpper();
+    const fake2 = 'SUPERAROGOTORY';
+    fake2.toLower();
     expect(String.prototype.toLowerCase).not.toHaveBeenCalled();
   });
 });
@@ -96,7 +96,7 @@ describe('test isQuestion method', () => {
 describe('test words function', () => {
   it('should return an array of the string provided', () => {
     expect('tonida'.words()).toEqual(['tonida']);
-    expect('Angel:Gabriel,is going home'.words())
+    expect('Angel:,Gabriel,is going home'.words())
     .toEqual(['Angel', 'Gabriel', 'is', 'going', 'home']);
     expect('Today,tomorrow'.words()).toEqual(['Today', 'tomorrow']);
     expect(''.words()).toEqual(null);
