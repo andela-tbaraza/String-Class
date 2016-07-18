@@ -75,6 +75,6 @@ String.prototype.startWith = function startWith(start) {
 };
 
 String.prototype.endWith = function endWith(end) {
-  /* affirms if the string ends with a specified input*/
+  /* affirms if the string ends with a specified input returns false if not */
   return new RegExp(end + '$', 'i').test(this);
 };
