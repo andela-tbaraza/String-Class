@@ -78,3 +78,34 @@ String.prototype.endWith = function endWith(end) {
   /* affirms if the string ends with a specified input returns false if not */
   return new RegExp(end + '$', 'i').test(this);
 };
+
+String.prototype.alternatingCase = function alternatingCase() {
+  let count = 0;
+  const testCase = /([a-z])/gi;
+  let final = '';
+
+  for (const lettr of this) {
+    if (lettr.match(testCase)) {
+      final = final.concat(count % 2 === 0 ? lettr.toLowerCase() : lettr.toUpperCase());
+      count++;
+    } else {
+      final = final.concat(lettr);
+    }
+  }
+  return final;
+};
+
+String.prototype.inverseCase = function inverseCase() {
+  const testCase = /([a-z])/gi;
+  let final = '';
+
+  for (const lettr of this) {
+    if (lettr.match(testCase)) {
+      final = final.concat(lettr.charCodeAt() > 96 && lettr.charCodeAt() < 123
+      ? lettr.toUpper() : lettr.toLower());
+    } else {
+      final = final.concat(lettr);
+    }
+  }
+  return final;
+};

@@ -170,3 +170,17 @@ describe('test endWith method', () => {
     expect('I am super excited!!!'.endWith('super')).toBeFalsy();
   });
 });
+
+describe('test alternatingCase method', () => {
+  it('should alternate cases in a string', () => {
+    expect('tonida'.alternatingCase()).toEqual('tOnIdA');
+    expect('#$tniAB788dr7da'.alternatingCase()).toEqual('#$tNiAb788Dr7Da');
+  });
+});
+
+describe('test inverseCase method', () => {
+  it('should output inverse cases of the string', () => {
+    expect('eish No way'.inverseCase()).toEqual('EISH nO WAY');
+    expect('*BGH54#rth'.inverseCase()).toEqual('*bgh54#RTH');
+  });
+});
