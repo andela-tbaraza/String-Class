@@ -14,7 +14,7 @@ String.prototype.toUpper = function toUpper() {
   /* Converts a string to uppercase format */
   const lower = /[a-z]/g;
   return this.replace(lower, (letter => {
-    return String.fromCharCode(letter.charCodeAt(0) - 32);
+    return String.fromCharCode(letter.charCodeAt() - 32);
   }));
 };
 
@@ -22,7 +22,7 @@ String.prototype.toLower = function toLower() {
   /* Converts a string to lowercase format */
   const upper = /[A-Z]/g;
   return this.replace(upper, letter => {
-    return String.fromCharCode(letter.charCodeAt(0) + 32);
+    return String.fromCharCode(letter.charCodeAt() + 32);
   });
 };
 
