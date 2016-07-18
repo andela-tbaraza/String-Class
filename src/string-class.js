@@ -65,7 +65,7 @@ String.prototype.numberWords = function numberWords() {
   const words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
   return this.replace(/[0-9]/g, (digit => {
     return words[digit] + ' ';
-  }));
+  })).trim();
 };
 
 String.prototype.startWith = function startWith(start) {
