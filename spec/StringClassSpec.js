@@ -157,9 +157,16 @@ describe('test numberWords method', () => {
 });
 
 describe('test startWith method', () => {
-  it('should affirm is a string starts with the specified input', () => {
+  it('should affirm if a string starts with the specified input', () => {
     expect('This is great'.startWith('This')).toBeTruthy();
     expect('@super does ABC'.startWith('@super')).toBeTruthy();
-    expect('reason and knowledge'.startWith()).toBeFalsy();
+    expect('reason and knowledge'.startWith('no')).toBeFalsy();
+  });
+});
+
+describe('test endWith method', () => {
+  it('should affirm if a string ends with the specified input', () => {
+    expect('It is highly expected'.endWith('expected')).toBeTruthy();
+    expect('I am super excited!!!'.endWith('super')).toBeFalsy();
   });
 });

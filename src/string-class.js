@@ -70,6 +70,11 @@ String.prototype.numberWords = function numberWords() {
 
 String.prototype.startWith = function startWith(start) {
   /* affirms if the string starts with the specified input */
-  const match = new RegExp(/(^\S+)/i.exec(this)[0]);
+  const match = new RegExp(/^\S+/i.exec(this)[0]);
   return match.test(start);
+};
+
+String.prototype.endWith = function endWith(end) {
+  // const match = new RegExp(/\S+\Z/gi.exec(this)[0])
+  return new RegExp(end + '$', 'i').test(this);
 };
