@@ -75,6 +75,6 @@ String.prototype.startWith = function startWith(start) {
 };
 
 String.prototype.endWith = function endWith(end) {
-  // const match = new RegExp(/\S+\Z/gi.exec(this)[0])
+  /* affirms if the string ends with a specified input*/
   return new RegExp(end + '$', 'i').test(this);
 };
