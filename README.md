@@ -78,6 +78,6 @@ let try2 = '34'.toCurrency() // returns '34.00'
 ```
 ### fromCurrency
 ```javascript
-let try1 = '5,673,392'.hasVowels() // returns 5673392
-let try2 = '4,696.56'.hasVowels() // returns 4696.56
+let try1 = '5,673,392'.fromCurrency() // returns 5673392
+let try2 = '4,696.56'.fromCurrency() // returns 4696.56
 ```
