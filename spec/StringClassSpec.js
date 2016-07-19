@@ -193,6 +193,7 @@ describe('test countLowerCase method', () => {
   it('should give the count of lowercase letters in a string', () => {
     expect('Jacky is awesome'.countLowerCase()).toEqual(13);
     expect('NOTHING'.countLowerCase()).toEqual(0);
+    expect('578(*&)'.countLowerCase()).toEqual(0);
   });
 });
 
@@ -200,5 +201,6 @@ describe('test countUpperCase method', () => {
   it('should give the count of uppercase letters', () => {
     expect('look'.countUpperCase()).toEqual(0);
     expect('This HAS 34s buses'.countUpperCase()).toEqual(4);
+    expect('567#@889'.countUpperCase()).toEqual(0);
   });
 });

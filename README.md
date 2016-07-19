@@ -35,49 +35,49 @@ This is an extension of the inbuilt String class. Basically it adds other method
 ### hasVowels
 ```javascript
 let try1 = 'toni'.hasVowels() // returns true
-let try2 = 'rtty'.hasVowels() returns false
+let try2 = 'rtty'.hasVowels() // returns false
 ```
 
 ### toUpper
 ```javascript
-let try1 = 'toni'.toUpper() returns 'TONI'
-let try2 = 'My day'.toUpper() returns 'MY DAY'
+let try1 = 'toni'.toUpper() // returns 'TONI'
+let try2 = 'My day'.toUpper() // returns 'MY DAY'
 ```
 
 ### toLower
 ```javascript
-let try1 = 'LORD'.toLower() returns 'lord'
-let try2 = '#1FBI Investigates'.toLower() returns '#1fbi Investigates'
+let try1 = 'LORD'.toLower() // returns 'lord'
+let try2 = '#1FBI Investigates'.toLower() // returns '#1fbi Investigates'
 ```
 ### ucFirst
 ```javascript
-let try1 = 'toni'.ucFirst() returns 'Toni'
-let try2 = '33street'.ucFirst() returns '33street'
+let try1 = 'toni'.ucFirst() // returns 'Toni'
+let try2 = '33street'.ucFirst() // returns '33street'
 ```
 ### isQuestion
 ```javascript
-let try1 = 'toni?'.isQuestion() returns true
-let try2 = 'rtty'.isQuestion() returns false
+let try1 = 'toni?'.isQuestion() // returns true
+let try2 = 'rtty'.isQuestion() // returns false
 
 ```
 ### words
 ```javascript
-let try1 = 'true, love'.words() returns ['true', 'love']
-let try2 = 'forget'.words() returns ['forget']
+let try1 = 'true, love'.words() returns // ['true', 'love']
+let try2 = 'forget'.words() returns // ['forget']
 ```
 
 ### wordCount
 ```javascript
-let try1 = 'God, is good'.wordCount() returns 3
-let try2 = 'yeah'.wordCount() returns 1
+let try1 = 'God, is good'.wordCount() // returns 3
+let try2 = 'yeah'.wordCount() // returns 1
 ```
 ### toCurrency
 ```javascript
-let try1 = '12387'.toCurrency() returns '12,387.00'
-let try2 = '34'.toCurrency() returns '34.00'
+let try1 = '12387'.toCurrency() // returns '12,387.00'
+let try2 = '34'.toCurrency() // returns '34.00'
 ```
 ### fromCurrency
 ```javascript
-let try1 = '5,673,392'.hasVowels() returns 5673392
-let try2 = '4,696.56'.hasVowels() returns 4696.56
+let try1 = '5,673,392'.hasVowels() // returns 5673392
+let try2 = '4,696.56'.hasVowels() // returns 4696.56
 ```
