@@ -184,3 +184,10 @@ describe('test inverseCase method', () => {
     expect('*BGH54#rth'.inverseCase()).toEqual('*bgh54#RTH');
   });
 });
+
+describe('test countLowerCase method', () => {
+  it('should give the count of lowercase letters in a string', () => {
+    expect('Jacky is awesome'.countLowerCase()).toEqual(13);
+    expect('NOTHING'.countLowerCase()).toEqual(0);
+  });
+});
