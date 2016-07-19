@@ -111,3 +111,7 @@ String.prototype.inverseCase = function inverseCase() {
   }
   return final;
 };
+
+String.prototype.countLowerCase = function countLowerCase() {
+  return this.replace(/[^a-z]/g, '').length;
+};
