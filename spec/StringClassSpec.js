@@ -102,6 +102,7 @@ describe('test words function', () => {
     expect('Today,tomorrow'.words()).toEqual(['Today', 'tomorrow']);
     expect(''.words()).toEqual(null);
     expect('This is Andela'.words()).toEqual(['This', 'is', 'Andela']);
+    expect(' '.words()).toEqual(['', '']);
   });
 
   it('should check that the type of results is an object', () => {
@@ -118,6 +119,7 @@ describe('test wordCount method', () => {
     expect('America'.wordCount()).toEqual(1);
     expect('This really sucks'.wordCount()).toEqual(3);
     expect('I:love, GOD'.wordCount()).toEqual(3);
+    expect(' '.wordCount()).toEqual(2);
   });
 
   it('should check type of the results to be number', () => {
