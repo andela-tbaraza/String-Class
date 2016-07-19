@@ -65,6 +65,7 @@ describe('test ucFirst method', () => {
     expect('tonida'.ucFirst()).toEqual('Tonida');
     expect('TONIDA'.ucFirst()).toEqual('TONIDA');
     expect('this is good'.ucFirst()).toEqual('This is good');
+    expect('34th day of the month'.ucFirst()).toEqual('34th day of the month');
   });
 
   it('should check the type of results to be a string', () => {
@@ -129,6 +130,7 @@ describe('test toCurrency method', () => {
     expect('12364'.toCurrency()).toEqual('12,364.00');
     expect('450425.97'.toCurrency()).toEqual('450,425.97');
     expect('8670'.toCurrency()).toEqual('8,670.00');
+    expect('56'.toCurrency()).toEqual('56.00');
   });
 
   it('should check the type of results to be a string', () => {
@@ -189,5 +191,12 @@ describe('test countLowerCase method', () => {
   it('should give the count of lowercase letters in a string', () => {
     expect('Jacky is awesome'.countLowerCase()).toEqual(13);
     expect('NOTHING'.countLowerCase()).toEqual(0);
+  });
+});
+
+describe('test countUpperCase method', () => {
+  it('should give the count of uppercase letters', () => {
+    expect('look'.countUpperCase()).toEqual(0);
+    expect('This HAS 34s buses'.countUpperCase()).toEqual(4);
   });
 });

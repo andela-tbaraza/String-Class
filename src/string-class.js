@@ -29,7 +29,7 @@ String.prototype.toLower = function toLower() {
 String.prototype.ucFirst = function ucFirst() {
   /* Converts the first letter of a string to uppercase */
   const first = /^[a-z]/i;
-  return first.exec(this)[0].toUpper() + this.slice(1);
+  return first.test(this) ? first.exec(this)[0].toUpper() + this.slice(1) : this;
 };
 
 String.prototype.isQuestion = function isQuestion() {
@@ -82,7 +82,7 @@ String.prototype.endWith = function endWith(end) {
 String.prototype.alternatingCase = function alternatingCase() {
   /* returns each letter in a string in alternating cases */
   let count = 0;
-  const testCase = /([a-z])/gi;
+  const testCase = /[a-z]/gi;
   let final = '';
 
   for (const letter of this) {
@@ -98,7 +98,7 @@ String.prototype.alternatingCase = function alternatingCase() {
 
 String.prototype.inverseCase = function inverseCase() {
   /* returns each letter in a string in inverse of its original case*/
-  const testCase = /([a-z])/gi;
+  const testCase = /[a-z]/gi;
   let final = '';
 
   for (const letter of this) {
@@ -114,4 +114,8 @@ String.prototype.inverseCase = function inverseCase() {
 
 String.prototype.countLowerCase = function countLowerCase() {
   return this.replace(/[^a-z]/g, '').length;
+};
+
+String.prototype.countUpperCase = function countUpperCase() {
+  return this.replace(/[^A-Z]/g, '').length;
 };
