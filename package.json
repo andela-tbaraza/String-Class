@@ -1,0 +1,26 @@
+{
+  "name": "string_class_extension",
+  "version": "1.0.0",
+  "description": "This is an extension of the javascript string class using prototypes",
+  "main": "string-class.js",
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.4",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1"
+  },
+  "scripts": {
+    "test": "istanbul cover jasmine && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-tbaraza/String-Class.git"
+  },
+  "author": "Tonida Baraza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andela-tbaraza/String-Class/issues"
+  },
+  "homepage": "https://github.com/andela-tbaraza/String-Class#readme"
+}
