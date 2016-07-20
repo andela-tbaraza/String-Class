@@ -155,6 +155,7 @@ describe('test startWith method', () => {
   it('should affirm if a string starts with the specified input', () => {
     expect('This is great'.startWith('This')).toBeTrue();
     expect('@super does ABC'.startWith('@super')).toBeTrue();
+    expect('fuur477r'.startWith('')).toBeTrue();
     expect('reason and knowledge'.startWith('no')).toBeFalse();
   });
 });

@@ -1,5 +1,4 @@
 /* eslint-disable no-extend-native */
-/* eslint-disable arrow-body-style */
 /* eslint-disable prefer-template */
 
 String.prototype.hasVowels = function hasVowels() {
@@ -13,23 +12,19 @@ String.prototype.hasVowels = function hasVowels() {
 String.prototype.toUpper = function toUpper() {
   /* Converts a string to uppercase format */
   const lower = /[a-z]/g;
-  return this.replace(lower, (letter => {
-    return String.fromCharCode(letter.charCodeAt() - 32);
-  }));
+  return this.replace(lower, letter => String.fromCharCode(letter.charCodeAt() - 32));
 };
 
 String.prototype.toLower = function toLower() {
   /* Converts a string to lowercase format */
   const upper = /[A-Z]/g;
-  return this.replace(upper, letter => {
-    return String.fromCharCode(letter.charCodeAt() + 32);
-  });
+  return this.replace(upper, letter => String.fromCharCode(letter.charCodeAt() + 32));
 };
 
 String.prototype.ucFirst = function ucFirst() {
   /* Converts the first letter of a string to uppercase */
   const first = /^[a-z]/i;
-  return first.test(this) ? first.exec(this)[0].toUpper() + this.slice(1) : this;
+  return first.test(this) ? this[0].toUpper() + this.slice(1) : this;
 };
 
 String.prototype.isQuestion = function isQuestion() {
@@ -63,9 +58,7 @@ String.prototype.fromCurrency = function fromCurrency() {
 String.prototype.numberWords = function numberWords() {
   /* returns the numbers in words*/
   const words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
-  return this.replace(/[0-9]/g, (digit => {
-    return words[digit] + ' ';
-  })).trim();
+  return this.replace(/[0-9]/g, (digit => words[digit] + ' ')).trim();
 };
 
 String.prototype.startWith = function startWith(start) {
