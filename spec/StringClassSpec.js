@@ -158,7 +158,7 @@ describe('test startWith method', () => {
   it('should affirm if a string starts with the specified input', () => {
     expect('This is great'.startWith('This')).toBeTrue();
     expect('@super does ABC'.startWith('@super')).toBeTrue();
-    // expect('fuur477r'.startWith('')).toBeTrue();
+    expect('fuur477r'.startWith('')).toBeTrue();
     expect('reason and knowledge'.startWith('no')).toBeFalse();
   });
 });
@@ -167,6 +167,7 @@ describe('test endWith method', () => {
   it('should affirm if a string ends with the specified input', () => {
     expect('It is highly expected'.endWith('expected')).toBeTrue();
     expect('I am super excited!!!'.endWith('super')).toBeFalse();
+    expect('834vfy4t'.endWith('')).toBeTrue();
   });
 });
 

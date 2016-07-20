@@ -63,13 +63,14 @@ String.prototype.numberWords = function numberWords() {
 
 String.prototype.startWith = function startWith(start) {
   /* affirms if the string starts with the specified input returns false if not */
-  const match = new RegExp(/^\S+/i.exec(this)[0]);
-  return match.test(start);
+  const match = /(^)(^\S+)/i.exec(this);
+  return match.includes(start);
 };
 
 String.prototype.endWith = function endWith(end) {
   /* affirms if the string ends with a specified input returns false if not */
-  return new RegExp(end + '$', 'i').test(this);
+  const match = /(\S+)($)/i.exec(this);
+  return match.includes(end);
 };
 
 String.prototype.alternatingCase = function alternatingCase() {
