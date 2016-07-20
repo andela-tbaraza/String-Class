@@ -8,7 +8,8 @@
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.4",
     "jasmine": "^2.4.1",
-    "jasmine-core": "^2.4.1"
+    "jasmine-core": "^2.4.1",
+    "jasmine-expect": "^2.0.2"
   },
   "scripts": {
     "test": "istanbul cover jasmine && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
