@@ -46,8 +46,8 @@ String.prototype.wordCount = function wordCount() {
 
 String.prototype.toCurrency = function toCurrency() {
   /* Returns a currency format of a string */
-  const floatString = parseFloat(this);
-  return floatString.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+  return /[0-9]/.test(this) ? parseFloat(this).toFixed(2)
+  .replace(/(\d)(?=(\d{3})+\.)/g, '$1,') : 'NaN';
 };
 
 String.prototype.fromCurrency = function fromCurrency() {
@@ -96,8 +96,8 @@ String.prototype.inverseCase = function inverseCase() {
 
   for (const letter of this) {
     if (letter.match(testCase)) {
-      final = final.concat(letter.charCodeAt() > 96 && letter.charCodeAt() < 123
-      ? letter.toUpper() : letter.toLower());
+      final = final.concat(letter.charCodeAt() > 96 && letter.charCodeAt() < 123 ?
+        letter.toUpper() : letter.toLower());
     } else {
       final = final.concat(letter);
     }

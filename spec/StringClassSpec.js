@@ -124,6 +124,7 @@ describe('test toCurrency method', () => {
     expect('450425.97'.toCurrency()).toEqual('450,425.97');
     expect('8670'.toCurrency()).toEqual('8,670.00');
     expect('56'.toCurrency()).toEqual('56.00');
+    expect('frbfrbf'.toCurrency()).toEqual('NaN');
   });
 
   it('should check the type of results to be a string', () => {
@@ -148,6 +149,8 @@ describe('test numberWords method', () => {
     expect('345'.numberWords()).toEqual('three four five');
     expect('1947'.numberWords()).toEqual('one nine four seven');
     expect('2648.00'.numberWords()).toEqual('two six four eight .zero zero');
+    expect('ghjfgg'.numberWords()).toEqual('ghjfgg');
+    expect('y6bjt8Y'.numberWords()).toEqual('ysix bjteight Y');
   });
 });
 
@@ -155,7 +158,7 @@ describe('test startWith method', () => {
   it('should affirm if a string starts with the specified input', () => {
     expect('This is great'.startWith('This')).toBeTrue();
     expect('@super does ABC'.startWith('@super')).toBeTrue();
-    expect('fuur477r'.startWith('')).toBeTrue();
+    // expect('fuur477r'.startWith('')).toBeTrue();
     expect('reason and knowledge'.startWith('no')).toBeFalse();
   });
 });
