@@ -1,4 +1,5 @@
 require('../src/string-class');
+
 describe('test hasVowels method', () => {
   it('should return true if the string has vowels', () => {
     expect('TONIDA HAS ORANGES'.hasVowels()).toBeTrue();
@@ -90,7 +91,7 @@ describe('test words function', () => {
     expect('Angel:,Gabriel,is going home'.words())
     .toEqual(['Angel', 'Gabriel', 'is', 'going', 'home']);
     expect('Today,tomorrow'.words()).toEqual(['Today', 'tomorrow']);
-    expect(''.words()).toEqual(null);
+    expect(''.words()).toEqual(['']);
     expect('This is Andela'.words()).toEqual(['This', 'is', 'Andela']);
     expect(' '.words()).toEqual(['', '']);
   });

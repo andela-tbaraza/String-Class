@@ -36,7 +36,7 @@ String.prototype.isQuestion = function isQuestion() {
 String.prototype.words = function words() {
   /* creates an array of the string*/
   const boundary = /\W+/;
-  return boundary.test(this) ? this.split(boundary) : this.match(/\S+/g);
+  return boundary.test(this) ? this.split(boundary) : [this];
 };
 
 String.prototype.wordCount = function wordCount() {
@@ -63,7 +63,7 @@ String.prototype.numberWords = function numberWords() {
 
 String.prototype.startWith = function startWith(start) {
   /* affirms if the string starts with the specified input returns false if not*/
-  const match = /(^)(^\S+)/i.exec(this);
+  const match = /(^)(\S+)/i.exec(this);
   return match.includes(start);
 };
 
