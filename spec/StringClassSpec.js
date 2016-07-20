@@ -1,22 +1,17 @@
 require('../src/string-class');
 describe('test hasVowels method', () => {
   it('should return true if the string has vowels', () => {
-    expect('TONIDA HAS ORANGES'.hasVowels()).toBeTruthy();
-    expect('TonidA'.hasVowels()).toBeTruthy();
-    expect('M37@i*, exp'.hasVowels()).toBeTruthy();
-    expect('mabishi'.hasVowels()).toBeTruthy();
+    expect('TONIDA HAS ORANGES'.hasVowels()).toBeTrue();
+    expect('TonidA'.hasVowels()).toBeTrue();
+    expect('M37@i*, exp'.hasVowels()).toBeTrue();
+    expect('mabishi'.hasVowels()).toBeTrue();
   });
 
   it('should return false if the string has no vowels', () => {
-    expect('TBNRTY'.hasVowels()).toBeFalsy();
-    expect('tbnrty'.hasVowels()).toBeFalsy();
-    expect('245Gy'.hasVowels()).toBeFalsy();
-    expect('Thy'.hasVowels()).toBeFalsy();
-  });
-
-  it('should check the type of results to be boolean', () => {
-    expect(typeof('mabishi'.hasVowels())).toBe('boolean');
-    expect(typeof('TBNRTY'.hasVowels())).toBe('boolean');
+    expect('TBNRTY'.hasVowels()).toBeFalse();
+    expect('tbnrty'.hasVowels()).toBeFalse();
+    expect('245Gy'.hasVowels()).toBeFalse();
+    expect('Thy'.hasVowels()).toBeFalse();
   });
 });
 
@@ -29,7 +24,7 @@ describe('test toUpper method', () => {
   });
 
   it('should check the type of results to be a string', () => {
-    expect(typeof('tonida'.toUpper())).toBe('string');
+    expect('tonida'.toUpper()).toBeString();
   });
 
   it('should check the inbuilt toUpper method has not called', () => {
@@ -49,7 +44,7 @@ describe('test toLower method', () => {
   });
 
   it('should check the type of results to be a string', () => {
-    expect(typeof('orthography'.toLower())).toBe('string');
+    expect('orthography'.toLower()).toBeString();
   });
 
   it('should check the inbuilt toLowerCase method has not called', () => {
@@ -69,28 +64,23 @@ describe('test ucFirst method', () => {
   });
 
   it('should check the type of results to be a string', () => {
-    expect(typeof('tonida'.ucFirst())).toBe('string');
+    expect('tonida'.ucFirst()).toBeString();
   });
 });
 
 describe('test isQuestion method', () => {
   it('should return true if the string is a question', () => {
-    expect('TONIDA HAS ORANGES?'.isQuestion()).toBeTruthy();
-    expect('TonidA?'.isQuestion()).toBeTruthy();
-    expect('M37@i*, exp?'.isQuestion()).toBeTruthy();
-    expect('mabishi?'.isQuestion()).toBeTruthy();
+    expect('TONIDA HAS ORANGES?'.isQuestion()).toBeTrue();
+    expect('TonidA?'.isQuestion()).toBeTrue();
+    expect('M37@i*, exp?'.isQuestion()).toBeTrue();
+    expect('mabishi?'.isQuestion()).toBeTrue();
   });
 
   it('should return false if the string is not a question', () => {
-    expect('TBNRTY'.isQuestion()).toBeFalsy();
-    expect('tbnrty'.isQuestion()).toBeFalsy();
-    expect('245Gy'.isQuestion()).toBeFalsy();
-    expect('Thy'.isQuestion()).toBeFalsy();
-  });
-
-  it('should check the type of results to be boolean', () => {
-    expect(typeof('mabishi?'.isQuestion())).toBe('boolean');
-    expect(typeof('TBNRTY'.isQuestion())).toBe('boolean');
+    expect('TBNRTY'.isQuestion()).toBeFalse();
+    expect('tbnrty'.isQuestion()).toBeFalse();
+    expect('245Gy'.isQuestion()).toBeFalse();
+    expect('Thy'.isQuestion()).toBeFalse();
   });
 });
 
@@ -110,7 +100,8 @@ describe('test words function', () => {
   });
 
   it('should check the results to be an instance of an array', () => {
-    expect(Array.isArray('Andela'.words())).toBeTruthy();
+    expect(('Andela is 100% awesome'.words())).toBeArray();
+    expect('Andela'.words()).toBeArrayOfStrings();
   });
 });
 
@@ -123,7 +114,7 @@ describe('test wordCount method', () => {
   });
 
   it('should check type of the results to be number', () => {
-    expect(typeof('America'.wordCount())).toBe('number');
+    expect('America'.wordCount()).toBeNumber();
   });
 });
 
@@ -136,7 +127,7 @@ describe('test toCurrency method', () => {
   });
 
   it('should check the type of results to be a string', () => {
-    expect(typeof('12364'.toCurrency())).toBe('string');
+    expect('12364'.toCurrency()).toBeString();
   });
 });
 
@@ -148,7 +139,7 @@ describe('test fromCurrency method', () => {
   });
 
   it('should check the type of results to be number', () => {
-    expect(typeof('11,111.11'.fromCurrency())).toBe('number');
+    expect('11,111.11'.fromCurrency()).toBeNumber();
   });
 });
 
@@ -162,16 +153,16 @@ describe('test numberWords method', () => {
 
 describe('test startWith method', () => {
   it('should affirm if a string starts with the specified input', () => {
-    expect('This is great'.startWith('This')).toBeTruthy();
-    expect('@super does ABC'.startWith('@super')).toBeTruthy();
-    expect('reason and knowledge'.startWith('no')).toBeFalsy();
+    expect('This is great'.startWith('This')).toBeTrue();
+    expect('@super does ABC'.startWith('@super')).toBeTrue();
+    expect('reason and knowledge'.startWith('no')).toBeFalse();
   });
 });
 
 describe('test endWith method', () => {
   it('should affirm if a string ends with the specified input', () => {
-    expect('It is highly expected'.endWith('expected')).toBeTruthy();
-    expect('I am super excited!!!'.endWith('super')).toBeFalsy();
+    expect('It is highly expected'.endWith('expected')).toBeTrue();
+    expect('I am super excited!!!'.endWith('super')).toBeFalse();
   });
 });
 
@@ -194,6 +185,7 @@ describe('test countLowerCase method', () => {
     expect('Jacky is awesome'.countLowerCase()).toEqual(13);
     expect('NOTHING'.countLowerCase()).toEqual(0);
     expect('578(*&)'.countLowerCase()).toEqual(0);
+    expect('dfhggeug'.countLowerCase()).toBeNumber();
   });
 });
 
@@ -202,5 +194,6 @@ describe('test countUpperCase method', () => {
     expect('look'.countUpperCase()).toEqual(0);
     expect('This HAS 34s buses'.countUpperCase()).toEqual(4);
     expect('567#@889'.countUpperCase()).toEqual(0);
+    expect('gfdjhf45SD5'.countUpperCase()).toBeNumber();
   });
 });
