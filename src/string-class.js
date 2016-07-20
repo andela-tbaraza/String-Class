@@ -63,7 +63,7 @@ String.prototype.numberWords = function numberWords() {
 
 String.prototype.startWith = function startWith(start) {
   /* affirms if the string starts with the specified input returns false if not*/
-  const match = /(^)(^\S+)/i.exec(this);
+  const match = /(^)(\S+)/i.exec(this);
   return match.includes(start);
 };
 
