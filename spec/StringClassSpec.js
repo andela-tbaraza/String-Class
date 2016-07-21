@@ -4,14 +4,13 @@ describe('test hasVowels method', () => {
   it('should return true if the string has vowels', () => {
     expect('TONIDA HAS ORANGES'.hasVowels()).toBeTrue();
     expect('TonidA'.hasVowels()).toBeTrue();
-    expect('M37@i*, exp'.hasVowels()).toBeTrue();
+    expect('@tonee'.hasVowels()).toBeTrue();
     expect('mabishi'.hasVowels()).toBeTrue();
   });
 
   it('should return false if the string has no vowels', () => {
-    expect('TBNRTY'.hasVowels()).toBeFalse();
-    expect('tbnrty'.hasVowels()).toBeFalse();
-    expect('245Gy'.hasVowels()).toBeFalse();
+    expect('ASTUTE'.hasVowels()).toBeFalse();
+    expect('trinity'.hasVowels()).toBeFalse();
     expect('Thy'.hasVowels()).toBeFalse();
   });
 });
@@ -20,7 +19,7 @@ describe('test toUpper method', () => {
   it('should return an uppercase form of the string passed', () => {
     expect('tonida'.toUpper()).toEqual('TONIDA');
     expect('ToNida'.toUpper()).toEqual('TONIDA');
-    expect('347tr, T&*()'.toUpper()).toEqual('347TR, T&*()');
+    expect('KCB 360V'.toUpper()).toEqual('KCB 360V');
     expect('This is good'.toUpper()).toEqual('THIS IS GOOD');
   });
 
@@ -79,8 +78,7 @@ describe('test isQuestion method', () => {
 
   it('should return false if the string is not a question', () => {
     expect('TBNRTY'.isQuestion()).toBeFalse();
-    expect('tbnrty'.isQuestion()).toBeFalse();
-    expect('245Gy'.isQuestion()).toBeFalse();
+    expect('How are you doing? I\'m great.'.isQuestion()).toBeFalse();
     expect('Thy'.isQuestion()).toBeFalse();
   });
 });
@@ -88,12 +86,12 @@ describe('test isQuestion method', () => {
 describe('test words function', () => {
   it('should return an array of the string provided', () => {
     expect('tonida'.words()).toEqual(['tonida']);
-    expect('Angel:,Gabriel,is going home'.words())
-    .toEqual(['Angel', 'Gabriel', 'is', 'going', 'home']);
-    expect('Today,tomorrow'.words()).toEqual(['Today', 'tomorrow']);
-    expect(''.words()).toEqual(['']);
+    expect('Angel Gabriel is going home'.words())
+      .toEqual(['Angel', 'Gabriel', 'is', 'going', 'home']);
+    expect('Today, tomorrow'.words()).toEqual(['Today,', 'tomorrow']);
+    expect(''.words()).toEqual([]);
     expect('This is Andela'.words()).toEqual(['This', 'is', 'Andela']);
-    expect(' '.words()).toEqual(['', '']);
+    expect('  '.words()).toEqual([]);
   });
 
   it('should check that the type of results is an object', () => {
@@ -110,8 +108,9 @@ describe('test wordCount method', () => {
   it('should count the number of words in a string', () => {
     expect('America'.wordCount()).toEqual(1);
     expect('This really sucks'.wordCount()).toEqual(3);
-    expect('I:love, GOD'.wordCount()).toEqual(3);
-    expect(' '.wordCount()).toEqual(2);
+    expect('I:love, GOD'.wordCount()).toEqual(2);
+    expect(' '.wordCount()).toEqual(0);
+    expect(''.wordCount()).toEqual(0);
   });
 
   it('should check type of the results to be number', () => {
@@ -176,6 +175,9 @@ describe('test alternatingCase method', () => {
   it('should alternate cases in a string', () => {
     expect('tonida'.alternatingCase()).toEqual('tOnIdA');
     expect('#$tniAB788dr7da'.alternatingCase()).toEqual('#$tNiAb788Dr7Da');
+    expect('rhtrht, njghgr74r3'.alternatingCase()).toEqual('rHtRhT, nJgHgR74r3');
+    expect('m'.alternatingCase()).toEqual('m');
+    expect('T'.alternatingCase()).toEqual('t');
   });
 });
 
@@ -201,5 +203,17 @@ describe('test countUpperCase method', () => {
     expect('This HAS 34s buses'.countUpperCase()).toEqual(4);
     expect('567#@889'.countUpperCase()).toEqual(0);
     expect('gfdjhf45SD5'.countUpperCase()).toBeNumber();
+  });
+});
+
+describe('test getMiddle method', () => {
+  it('should get the middle character(s) of a string', () => {
+    expect('47dr4rfr6'.getMiddle()).toEqual('4');
+    expect('G7ah9u'.getMiddle()).toEqual('ah');
+    expect('uehdsknc'.getMiddle()).toEqual('ds');
+    expect('hgrihDrhgbVjfngjr'.getMiddle()).toEqual('g');
+    expect('*&^&^$@$%()'.getMiddle()).toEqual('$');
+    expect('4760845'.getMiddle()).toEqual('0');
+    expect(''.getMiddle()).toEqual('');
   });
 });
