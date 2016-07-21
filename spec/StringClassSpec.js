@@ -9,8 +9,8 @@ describe('test hasVowels method', () => {
   });
 
   it('should return false if the string has no vowels', () => {
-    expect('ASTUTE'.hasVowels()).toBeFalse();
-    expect('trinity'.hasVowels()).toBeFalse();
+    expect('HYMN'.hasVowels()).toBeFalse();
+    expect('symphysy '.hasVowels()).toBeFalse();
     expect('Thy'.hasVowels()).toBeFalse();
   });
 });
@@ -38,8 +38,8 @@ describe('test toUpper method', () => {
 describe('test toLower method', () => {
   it('should return a lowercase form of the string passed', () => {
     expect('TONIDA'.toLower()).toEqual('tonida');
-    expect('TONIDA'.toLower()).toEqual('tonida');
-    expect('347TR, T&*()'.toLower()).toEqual('347tr, t&*()');
+    expect('consider getting a NIGHT-JOB'.toLower()).toEqual('consider getting a night-job');
+    expect('R&B'.toLower()).toEqual('r&b');
     expect('THIS IS GOOD'.toLower()).toEqual('this is good');
   });
 
@@ -90,7 +90,7 @@ describe('test words function', () => {
       .toEqual(['Angel', 'Gabriel', 'is', 'going', 'home']);
     expect('Today, tomorrow'.words()).toEqual(['Today,', 'tomorrow']);
     expect(''.words()).toEqual([]);
-    expect('This is Andela'.words()).toEqual(['This', 'is', 'Andela']);
+    expect('This is Andela-TIA'.words()).toEqual(['This', 'is', 'Andela-TIA']);
     expect('  '.words()).toEqual([]);
   });
 
@@ -167,7 +167,7 @@ describe('test endWith method', () => {
   it('should affirm if a string ends with the specified input', () => {
     expect('It is highly expected'.endWith('expected')).toBeTrue();
     expect('I am super excited!!!'.endWith('super')).toBeFalse();
-    expect('834vfy4t'.endWith('')).toBeTrue();
+    expect('GREAT'.endWith('')).toBeTrue();
   });
 });
 
