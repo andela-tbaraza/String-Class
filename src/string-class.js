@@ -35,8 +35,8 @@ String.prototype.isQuestion = function isQuestion() {
 
 String.prototype.words = function words() {
   /* creates an array of the string*/
-  const boundary = /\W+/;
-  return boundary.test(this) ? this.split(boundary) : [this];
+  const testCase = /^\w/;
+  return testCase.test(this) ? this.trim().split(' ') : [];
 };
 
 String.prototype.wordCount = function wordCount() {
@@ -47,7 +47,7 @@ String.prototype.wordCount = function wordCount() {
 String.prototype.toCurrency = function toCurrency() {
   /* Returns a currency format of a string */
   return /[0-9]/.test(this) ? parseFloat(this).toFixed(2)
-  .replace(/(\d)(?=(\d{3})+\.)/g, '$1,') : 'NaN';
+    .replace(/(\d)(?=(\d{3})+\.)/g, '$1,') : 'NaN';
 };
 
 String.prototype.fromCurrency = function fromCurrency() {
@@ -114,4 +114,8 @@ String.prototype.countLowerCase = function countLowerCase() {
 String.prototype.countUpperCase = function countUpperCase() {
   /* returns the count of uppercase letters in a string*/
   return this.replace(/[^A-Z]/g, '').length;
+};
+
+String.prototype.getMiddle = function getMiddle() {
+  return this.substr(Math.ceil(this.length / 2 - 1), this.length % 2 === 0 ? 2 : 1);
 };
