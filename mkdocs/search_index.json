@@ -1,0 +1,84 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "String Class Extension\n\n\nThis is an extension of the inbuilt String class. Basically it adds other methods to this class.The methods' execution is similar to the normal String class methods. The extension has been implemented using javascript prototypes concept.\n\n\nUsage\n\n\n\n\nInstall \nNodeJs\n\n\nClone the \nrepository\n\n\nInstall the dependencies \n$ npm install\n\n\n\n\nRunning on Node\n\n\n\n\nGet the node environment \n$ node\n\n\nRequire the source file\n\n require('./src/string-class.js')\n\n\nUse the various methods as specified in the featured     methods example\n\n\n\n\nFeatured methods\n\n\nhasVowels\n\n\nlet try1 = 'toni'.hasVowels() // returns true\nlet try2 = 'rtty'.hasVowels() // returns false\n\n\n\n\ntoUpper\n\n\nlet try1 = 'toni'.toUpper() // returns 'TONI'\nlet try2 = 'My day'.toUpper() // returns 'MY DAY'\n\n\n\n\ntoLower\n\n\nlet try1 = 'LORD'.toLower() // returns 'lord'\nlet try2 = '#1FBI Investigates'.toLower() // returns '#1fbi Investigates'\n\n\n\n\nucFirst\n\n\nlet try1 = 'toni'.ucFirst() // returns 'Toni'\nlet try2 = '33street'.ucFirst() // returns '33street'\n\n\n\n\nisQuestion\n\n\nlet try1 = 'toni?'.isQuestion() // returns true\nlet try2 = 'rtty'.isQuestion() // returns false\n\n\n\n\n\nwords\n\n\nlet try1 = 'true, love'.words() returns // ['true', 'love']\nlet try2 = 'forget'.words() returns // ['forget']\n\n\n\n\nwordCount\n\n\nlet try1 = 'God, is good'.wordCount() // returns 3\nlet try2 = 'yeah'.wordCount() // returns 1\n\n\n\n\ntoCurrency\n\n\nlet try1 = '12387'.toCurrency() // returns '12,387.00'\nlet try2 = '34'.toCurrency() // returns '34.00'\n\n\n\n\nfromCurrency\n\n\nlet try1 = '5,673,392'.fromCurrency() // returns 5673392\nlet try2 = '4,696.56'.fromCurrency() // returns 4696.56\n\n\n\n\nRunning the tests\n\n\n\n\nOn your terminal change directory to the root project folder.\n\n\nRun \n$ npm test\nout", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#string-class-extension", 
+            "text": "This is an extension of the inbuilt String class. Basically it adds other methods to this class.The methods' execution is similar to the normal String class methods. The extension has been implemented using javascript prototypes concept.", 
+            "title": "String Class Extension"
+        }, 
+        {
+            "location": "/#usage", 
+            "text": "Install  NodeJs  Clone the  repository  Install the dependencies  $ npm install", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/#running-on-node", 
+            "text": "Get the node environment  $ node  Require the source file  require('./src/string-class.js')  Use the various methods as specified in the featured     methods example", 
+            "title": "Running on Node"
+        }, 
+        {
+            "location": "/#featured-methods", 
+            "text": "", 
+            "title": "Featured methods"
+        }, 
+        {
+            "location": "/#hasvowels", 
+            "text": "let try1 = 'toni'.hasVowels() // returns true\nlet try2 = 'rtty'.hasVowels() // returns false", 
+            "title": "hasVowels"
+        }, 
+        {
+            "location": "/#toupper", 
+            "text": "let try1 = 'toni'.toUpper() // returns 'TONI'\nlet try2 = 'My day'.toUpper() // returns 'MY DAY'", 
+            "title": "toUpper"
+        }, 
+        {
+            "location": "/#tolower", 
+            "text": "let try1 = 'LORD'.toLower() // returns 'lord'\nlet try2 = '#1FBI Investigates'.toLower() // returns '#1fbi Investigates'", 
+            "title": "toLower"
+        }, 
+        {
+            "location": "/#ucfirst", 
+            "text": "let try1 = 'toni'.ucFirst() // returns 'Toni'\nlet try2 = '33street'.ucFirst() // returns '33street'", 
+            "title": "ucFirst"
+        }, 
+        {
+            "location": "/#isquestion", 
+            "text": "let try1 = 'toni?'.isQuestion() // returns true\nlet try2 = 'rtty'.isQuestion() // returns false", 
+            "title": "isQuestion"
+        }, 
+        {
+            "location": "/#words", 
+            "text": "let try1 = 'true, love'.words() returns // ['true', 'love']\nlet try2 = 'forget'.words() returns // ['forget']", 
+            "title": "words"
+        }, 
+        {
+            "location": "/#wordcount", 
+            "text": "let try1 = 'God, is good'.wordCount() // returns 3\nlet try2 = 'yeah'.wordCount() // returns 1", 
+            "title": "wordCount"
+        }, 
+        {
+            "location": "/#tocurrency", 
+            "text": "let try1 = '12387'.toCurrency() // returns '12,387.00'\nlet try2 = '34'.toCurrency() // returns '34.00'", 
+            "title": "toCurrency"
+        }, 
+        {
+            "location": "/#fromcurrency", 
+            "text": "let try1 = '5,673,392'.fromCurrency() // returns 5673392\nlet try2 = '4,696.56'.fromCurrency() // returns 4696.56", 
+            "title": "fromCurrency"
+        }, 
+        {
+            "location": "/#running-the-tests", 
+            "text": "On your terminal change directory to the root project folder.  Run  $ npm test out", 
+            "title": "Running the tests"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "I am a software Engineer at Andela.\nYou will know me better as time goes by. Watch out!!!!", 
+            "title": "About Me"
+        }
+    ]
+}

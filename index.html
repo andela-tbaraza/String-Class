@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>JavaScript String Class Extension</title>
+  
+
+  <link rel="shortcut icon" href="./img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "None";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script>
+  <script src="./js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> JavaScript String Class Extension</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href=".">Home</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#string-class-extension">String Class Extension</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#usage">Usage</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#running-on-node">Running on Node</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#featured-methods">Featured methods</a></li>
+                
+                    <li><a class="toctree-l4" href="#hasvowels">hasVowels</a></li>
+                
+                    <li><a class="toctree-l4" href="#toupper">toUpper</a></li>
+                
+                    <li><a class="toctree-l4" href="#tolower">toLower</a></li>
+                
+                    <li><a class="toctree-l4" href="#ucfirst">ucFirst</a></li>
+                
+                    <li><a class="toctree-l4" href="#isquestion">isQuestion</a></li>
+                
+                    <li><a class="toctree-l4" href="#words">words</a></li>
+                
+                    <li><a class="toctree-l4" href="#wordcount">wordCount</a></li>
+                
+                    <li><a class="toctree-l4" href="#tocurrency">toCurrency</a></li>
+                
+                    <li><a class="toctree-l4" href="#fromcurrency">fromCurrency</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#running-the-tests">Running the tests</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="about/">About Me</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">JavaScript String Class Extension</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="string-class-extension">String Class Extension</h1>
+<p>This is an extension of the inbuilt String class. Basically it adds other methods to this class.The methods' execution is similar to the normal String class methods. The extension has been implemented using javascript prototypes concept.</p>
+<h1 id="usage">Usage</h1>
+<ul>
+<li>Install <a href="https://nodejs.org/en/">NodeJs</a></li>
+<li>Clone the <a href="https://github.com/andela-tbaraza/String-Class.git">repository</a></li>
+<li>Install the dependencies <code>$ npm install</code></li>
+</ul>
+<h1 id="running-on-node">Running on Node</h1>
+<ul>
+<li>Get the node environment <code>$ node</code></li>
+<li>Require the source file
+<code>&gt; require('./src/string-class.js')</code></li>
+<li>Use the various methods as specified in the featured     methods example</li>
+</ul>
+<h1 id="featured-methods">Featured methods</h1>
+<h3 id="hasvowels">hasVowels</h3>
+<pre><code class="javascript">let try1 = 'toni'.hasVowels() // returns true
+let try2 = 'rtty'.hasVowels() // returns false
+</code></pre>
+
+<h3 id="toupper">toUpper</h3>
+<pre><code class="javascript">let try1 = 'toni'.toUpper() // returns 'TONI'
+let try2 = 'My day'.toUpper() // returns 'MY DAY'
+</code></pre>
+
+<h3 id="tolower">toLower</h3>
+<pre><code class="javascript">let try1 = 'LORD'.toLower() // returns 'lord'
+let try2 = '#1FBI Investigates'.toLower() // returns '#1fbi Investigates'
+</code></pre>
+
+<h3 id="ucfirst">ucFirst</h3>
+<pre><code class="javascript">let try1 = 'toni'.ucFirst() // returns 'Toni'
+let try2 = '33street'.ucFirst() // returns '33street'
+</code></pre>
+
+<h3 id="isquestion">isQuestion</h3>
+<pre><code class="javascript">let try1 = 'toni?'.isQuestion() // returns true
+let try2 = 'rtty'.isQuestion() // returns false
+
+</code></pre>
+
+<h3 id="words">words</h3>
+<pre><code class="javascript">let try1 = 'true, love'.words() returns // ['true', 'love']
+let try2 = 'forget'.words() returns // ['forget']
+</code></pre>
+
+<h3 id="wordcount">wordCount</h3>
+<pre><code class="javascript">let try1 = 'God, is good'.wordCount() // returns 3
+let try2 = 'yeah'.wordCount() // returns 1
+</code></pre>
+
+<h3 id="tocurrency">toCurrency</h3>
+<pre><code class="javascript">let try1 = '12387'.toCurrency() // returns '12,387.00'
+let try2 = '34'.toCurrency() // returns '34.00'
+</code></pre>
+
+<h3 id="fromcurrency">fromCurrency</h3>
+<pre><code class="javascript">let try1 = '5,673,392'.fromCurrency() // returns 5673392
+let try2 = '4,696.56'.fromCurrency() // returns 4696.56
+</code></pre>
+
+<h1 id="running-the-tests">Running the tests</h1>
+<ul>
+<li>On your terminal change directory to the root project folder.</li>
+<li>Run <code>$ npm test</code>out</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="about/" class="btn btn-neutral float-right" title="About Me">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="about/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.15.3
+Build Date UTC : 2016-07-27 09:50:15.455493
+-->
